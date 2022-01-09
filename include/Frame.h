@@ -191,7 +191,7 @@ public:
 
     static bool mbInitialComputations;
 
-
+    bool getSceneDepth(Frame& frame, double& depth_mean, double& depth_min);
 private:
 
     // Undistort keypoints given OpenCV distortion parameters.
@@ -210,6 +210,8 @@ private:
     cv::Mat mtcw;
     cv::Mat mRwc;
     cv::Mat mOw; //==mtwc
+
+    
 };
 
 }// namespace ORB_SLAM
